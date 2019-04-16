@@ -6,7 +6,6 @@
 #define GAS_RES_DELAY_VAL 5
 #define CLEAN_AIR_FACTOR 9.83
 #define TOTAL_GASES_IDENTIFY 3
-``
 
 // dust sensor contituents
 int dust_in = A0;
