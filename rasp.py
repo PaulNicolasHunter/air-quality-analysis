@@ -3,16 +3,17 @@ import time
 import json
 import gspread
 from datetime import datetime as dt
+from oauth2client.service_account import ServiceAccountCredentials
 
 aud = serial.Serial("/dev/ttyACM0", 9600)
 scopes = ["https://www.googleapis.com/auth/drive",
           "https://www.googleapis.com/auth/spreadsheets"]
 
 goog_creds = ServiceAccountCredentials.from_json_keyfile_name(
-    '<json-name>.json', scopes=scopes)
+    'airy.json', scopes=scopes)
 
 gc = gspread.authorize(goog_creds)
-sheet = gc.open('Air Quality')
+sheet = gc.create('Air Quality1')
 work_sheet = sheet.get_worksheet(0)
 
 
@@ -27,4 +28,4 @@ while True:
     loaded = json.loads(aud.read())
     its_in_the_air = process_dat(loaded)
     work_sheet = detail.append_row(its_in_the_air)
-    print(f"dust reading => {loaded['dust']}, {loaded['0']['gas']} => {loaded['0']['reading']}, {loaded['1']['gas']} => {loaded['1']['reading']}, {loaded['2']['gas']} => {loaded['2']['reading']}")
+    print(f"dust reading => {loaded['dust']}, {loaded['0']['gas']} => {loaded['0']['reading']}, {} => {}, {} => {}".format(loaded['1']['gas'], loaded['1']['reading'],loaded['2']['gas'], loaded['2']['reading']))
