@@ -4,9 +4,12 @@ import json
 import gspread
 from datetime import datetime as dt
 from oauth2client.service_account import ServiceAccountCredentials
+from multiprocessing import Process
 import re
 
-aud = serial.Serial("/dev/ttyACM1", 9600)
+
+aud = serial.Serial("/dev/ttyACM0", 9600)
+its_in_the_air = []
 scopes = ["https://www.googleapis.com/auth/drive",
           "https://www.googleapis.com/auth/spreadsheets"]
 
@@ -14,22 +17,41 @@ goog_creds = ServiceAccountCredentials.from_json_keyfile_name(
     'airy.json', scopes=scopes)
 
 gc = gspread.authorize(goog_creds)
-sheet = gc.open('Air Quality1')
-sheet.share('choudhary.vivek98@gmail.com', perm_type='user', role='writer')
+sheet = gc.open('Air_Quality')
 work_sheet = sheet.worksheet('sheet')
-
 
 def process_dat(dat):
     """
        The columns will be: TimeStamp, dust_reading, gas_reading_1, gas_reading_2, gas_reading_3
     """
-    return [dt.now().strftime('%A-%d-%B-%Y-(%H-%M-%S-%f)-%Z'), dat]
+    return [dt.now().strftime('%A'), dt.now().strftime('%d-%B-%Y'), dt.now().strftime('%H-%M-%S-%f'), dat]
 
+def read_line():
+    loaded = re.findall('\d.\d\d', str(aud.readline()))
+    if loaded:
+        print(float(loaded[0]))
+        its_in_the_air.append(process_dat(float(loaded[0])))
 
-while True:
-    loaded = str(aud.read())
+def read_line():
+    loaded = re.findall('\d.\d\d', str(aud.readline()))
+    if loaded:
+        print(float(loaded[0]))
+        its_in_the_air.append(process_dat(float(loaded[0])))
+
+def update_sheet():    
+    if len(its_in_the_air) == 100:
+        for _ in its_in_the_air:
+            work_sheet.append_row(_)
+        its_in_the_air = []
+
+if __name__ == '__main__':
+
+    read = Process(target=read_line)
+    write = Process(target=update_sheet)
     
-    print(loaded)
-##    if not dat:
-##        its_in_the_air = process_dat(float(loaded))
-##        work_sheet.append_row(its_in_the_air)
+    while True:
+        read.start()    
+        write.start()
+        read.join()
+        read.join()
+        
