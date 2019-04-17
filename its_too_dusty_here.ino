@@ -45,7 +45,7 @@ void loop() {
 
   dust_samp = read_dust();
   ratio = gaseous_air_res_samples();
-  gas_digest(ratio);
+  gas_digest(ratio / 10);
   
   Serial.println(dust_samp);
   
