@@ -1,5 +1,5 @@
 import serial
-import time
+import datetime
 import json
 import gspread
 from datetime import datetime as dt
@@ -23,7 +23,7 @@ def process_dat(dat):
     """
        The columns will be: TimeStamp, dust_reading, gas_reading_1, gas_reading_2, gas_reading_3
     """
-    return [dt.now().strftime('%A'), dt.now().strftime('%d-%B-%Y'), dt.now().strftime('%H-%M-%S-%f'), dat]
+    return [round(datetime.datetime.utcnow().timestamp() * 1000), dat]
 
 def read_line():
     loaded = re.findall('\d.\d\d', str(aud.readline()))
