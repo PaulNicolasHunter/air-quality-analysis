@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "airqualityanalysis",
+  "private_key_id": "8d55d4074c6d4618dd6bfdb5df59395290c58a8c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCrikcu03YTw2xR\nQvj5YKx+2nch1YlvoKcp3vJw5reeo9T/Rl6It7MP0Q98KRgksvugKHQna8fDBpbG\nVRH2GNBmHEf1b8oVjwoHTKTuEKKRyvuTc26z6R0l/C6z/yqWOgL/TafTPJASyaVk\nandOhChvpgWUKac5QnyDDHRN5j6FOpKkRHA4fy91Wpz5egEsCI1FMDbXl78QOnlR\nGXyPd/m9tYF41szbPwduvy0VrrTUJji5J3TizEv9WbxQz9OLPE3OdNVUchqbPFca\nYaqoh79O20dDGA2BKKnAQU0ZaNkzmlZyt7R+ANPHk44m+/Rwh6hCI1eux7VLdavW\nWfcVUQGdAgMBAAECggEATJEtobiQcVTesczffcxJYlvYJhl+vX0rcDSL6ZoJ5r0A\n8yqxQnwgaFRsAYMEPElJqFy2L+xbX3E+9mr9V+gOiS1hbyuFO6c7ljN/QKXbMpE0\nRsYU6SgJsy1DmWMxWpmtQdCjMtXLBx/Le61L8Jdrxx4HSnFnK1dCZWo3NZgqWuOl\nUMuTnXG3RwcELwxh1IBULwmGkqu49+twTIFLJfTcc4nVqcw3ZQ8jrUXvmCXO4f8I\nWpIaSLwEZQ4IV/VShlUqqdJCr+6X6uiB9y5SKOkL2fvkcf+cO5aiB2rKuhyhdgMC\niWMA5y/vkPr+CAC3EZPdmMX51xGdIQ9Gcjcux/Mb/wKBgQDbU8DmjLC+PqWh1H6u\n5Gbwv3iERc5gCMWSa6S5rbOZKYhpNasVj6+N1WkAmjZ5jetsNqOvggN7yqKj+Qgl\ndVhalJ91zTneBcnK7JxoRc5gQwJF3Q3nsGqmwM/oR3ofqjviNIA2SSNeAg1UHhrK\neSnjntf5uIbeoN+LtTN/ghVGawKBgQDIOQNN8VVTURt5txlFDHmSezWuexm1LlFo\npRfcC1lnzLHKUkSZUJr2qDaGiIpryPVrTqeFjjyLfYXRIOhHcqdKNd/IaXMJ3pVd\nt0zsu9iwsS1Bda/HYtxonBlHejxw2cbn5d3kzCAgO1tcv0K9xTH1Bwdqd57/VAKA\nreSyMNaKFwKBgQDOdZzUagPGUjqgh+NoxuCQJ+1Otld610cEegfqMbUqrIoYX8jY\n1xUusoHRa1l0O0At8ZFMGVsmIK3RJQ+iE0BEpDsnLTUX5uL5/pmNHokS3IE7Osdo\nHg2HQ2FzCjXPsPQGD93RPC/qwovBb0VQ65WfC1vLWwS6dT15yezcTpuwWQKBgQCM\nwH+RMGFSM8dD1jJ+dtmT3ueK4+DbnFcAYGaYeqX8MUqetxygRqjZUsEZ7Cyavue/\n6sgbPDVVvgTvUdnYOEJgCeVqJq8HNiD8g5ohJaCb/cGZrdjHKrlVFL80nzqT/pQ0\ne0R0zgabgf6lAZMygsiuvqU49CSiy3UC7rvBhFGdOwKBgQDUaUUVJWsx8eXE3bDa\nh7qgloHanbKP4rioJkjSNH87gbCBw5hyHDOLo1linuvPToICwVpXv2p03sP9wA/N\nX9GPSGvJ0TI3gEH9bEe0X4aOH69FfUPq1ftt1A/Iimx1Im7hPdJIzs4+OxGUKe56\nzzPuNMod+iO+AkKa+4iOu2B+GA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "iot-work@airqualityanalysis.iam.gserviceaccount.com",
+  "client_id": "114511585446674151373",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/iot-work%40airqualityanalysis.iam.gserviceaccount.com"
+}
