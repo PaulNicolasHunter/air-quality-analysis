@@ -45,16 +45,16 @@ air_;
 void setup() {
 
   Serial.begin(9600);
-  Serial.write("Calibrating...");
-  pure_air_read_calibration();
+//  Serial.write("Calibrating...");
+ // pure_air_read_calibration();
   pinMode(dust_led, OUTPUT);
 }
 
 void loop() {
 
   dust_samp = read_dust();
-  ratio = gaseous_air_res_samples();
-  gas_digest(ratio);
+  //ratio = gaseous_air_res_samples();
+  //gas_digest(ratio);
 
   Serial.println(dust_samp);
 
@@ -72,7 +72,7 @@ void loop() {
     gpio logic goes here
    */
 
-  Serial.println("{\"dust\":" + String(dust_samp) + ",\"0\":{\"gas\":" + String(air_.gas[0]) + ",\"reading\":" + String(air_.reading[0]) + "},\"1\":{\"gas\":" + String(air_.gas[1]) + ",\"reading\":" + String(air_.reading[1]) + "},\"2\":{\"gas\":" + String(air_.gas[2]) + ",\"reading\":" + String(air_.reading[2]) + "}}");
+   Serial.println('{"dust":' + dtostrf(dust_samp) + ',"0":{"gas":' + dtostrf(air_.gas[0]) + ',"reading":' + dtostrf(air_.reading[0]) + '},"1":{"gas":' + dtostrf(air_.gas[1]) + ',"reading":' + dtostrf(air_.reading[1]) + '},"2":{"gas":' + dtostrf(air_.gas[2]) + ',"reading":' + dtostrf(air_.reading[2]) + '}}');
 }
 
 /* Dust sensor reading */
