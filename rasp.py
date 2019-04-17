@@ -9,7 +9,6 @@ import re
 
 
 aud = serial.Serial("/dev/ttyACM0", 9600)
-its_in_the_air = []
 scopes = ["https://www.googleapis.com/auth/drive",
           "https://www.googleapis.com/auth/spreadsheets"]
 
@@ -29,29 +28,14 @@ def process_dat(dat):
 def read_line():
     loaded = re.findall('\d.\d\d', str(aud.readline()))
     if loaded:
-        print(float(loaded[0]))
-        its_in_the_air.append(process_dat(float(loaded[0])))
+        return process_dat(float(loaded[0]))
 
-def read_line():
-    loaded = re.findall('\d.\d\d', str(aud.readline()))
-    if loaded:
-        print(float(loaded[0]))
-        its_in_the_air.append(process_dat(float(loaded[0])))
-
-def update_sheet():    
-    if len(its_in_the_air) == 100:
-        for _ in its_in_the_air:
-            work_sheet.append_row(_)
-        its_in_the_air = []
+def update_sheet(its_in_the_air):
+    work_sheet.append_row(its_in_the_air)
 
 if __name__ == '__main__':
 
-    read = Process(target=read_line)
-    write = Process(target=update_sheet)
-    
     while True:
-        read.start()    
-        write.start()
-        read.join()
-        read.join()
+        cool = read_line()    
+        update_sheet(cool)
         

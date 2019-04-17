@@ -70,12 +70,12 @@ void loop() {
     analogWrite(fan_out, 255);
 
   }
-  else {
+  else {  
     analogWrite(fan_out, 0);
 
   }
 
-  delay(2000);
+  delay(5000);  
   
   /*
     gpio logic goes here
