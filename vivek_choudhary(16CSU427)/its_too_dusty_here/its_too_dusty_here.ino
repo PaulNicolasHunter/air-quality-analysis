@@ -1,4 +1,4 @@
- /* *-*- some definations *-* */
+/* *-*- some definations *-* */
 #define CALIBRATION_SAMPLES 100
 #define CALIBRATION_INTERVAL 50
 #define LOAD_RESISTANCE_VAL 5.0
@@ -9,13 +9,13 @@
 
 // dust sensor contituents
 int dust_in = A0;
-int fan_out = A3;
+int fan_out = A5;
 int dust_led = 7;
 float dust_read, dust_samp, dust_;
 unsigned int delt_time = 40;
 
 // gas sensor contituents
-int gas_sens = A6;
+int gas_sens = A2;
 float r0, ratio;
 unsigned int sampling_time = 280;
 unsigned int sleep_time = 9680;
@@ -49,18 +49,24 @@ air_;
 void setup() {
 
   Serial.begin(9600);
-  Serial.write("Calibrating...");
-  pure_air_read_calibration();
+  //  Serial.write("Calibrating...");
+  // pure_air_read_calibration();
+  //  Serial.write("Calibrating...");
+  //  pure_air_read_calibration();
   pinMode(dust_led, OUTPUT);
 }
 
 void loop() {
 
   dust_samp = read_dust();
-  ratio = gaseous_air_res_samples();
-  gas_digest(ratio / 10);
-//  Serial.println(ratio);
-  if (dust_samp >= 0.20) {
+  //ratio = gaseous_air_res_samples();
+  //gas_digest(ratio);
+  //  ratio = gaseous_air_res_samples();
+
+  //  gas_digest(ratio / 10);
+  Serial.println(dust_samp);
+  if (dust_samp >= 0.10) {
+
     analogWrite(fan_out, 255);
 
   }
@@ -69,13 +75,13 @@ void loop() {
 
   }
 
-  delay(5000);  
+//  delay(5000);  
   
-  /**
+  /*
     gpio logic goes here
   */
 
-  Serial.println("{\"dust\":" + String(dust_samp) + ",\"0\":{\"gas\":" + String(air_.gas[0]) + ",\"reading\":" + String(air_.reading[0]) + "},\"1\":{\"gas\":" + String(air_.gas[1]) + ",\"reading\":" + String(air_.reading[1]) + "},\"2\":{\"gas\":" + String(air_.gas[2]) + ",\"reading\":" + String(air_.reading[2]) + "}}");
+//  Serial.println("{\"dust\":" + String(dust_samp) + ",\"0\":{\"gas\":" + String(air_.gas[0]) + ",\"reading\":" + String(air_.reading[0]) + "},\"1\":{\"gas\":" + String(air_.gas[1]) + ",\"reading\":" + String(air_.reading[1]) + "},\"2\":{\"gas\":" + String(air_.gas[2]) + ",\"reading\":" + String(air_.reading[2]) + "}}");
 }
 
 /* Dust sensor reading */
@@ -115,6 +121,7 @@ float pure_air_read_calibration() {
 float calibrate_current_reading(float raw_read) {
 
   raw_read = raw_read * (LOAD_RESISTANCE_VAL / 1024.0);
+
   return ((float)LOAD_RESISTANCE_VAL - raw_read) / raw_read;
 }
 
