@@ -12,7 +12,7 @@ scopes = ["https://www.googleapis.com/auth/drive",
           "https://www.googleapis.com/auth/spreadsheets"]
 
 goog_creds = ServiceAccountCredentials.from_json_keyfile_name(
-    '<crediatial_used>.json', scopes=scopes) # private
+    'AirQualityAnalysis-ea5a3f740a75.json', scopes=scopes) # private
 
 gc = gspread.authorize(goog_creds)
 sheet = gc.open('Air_Quality')

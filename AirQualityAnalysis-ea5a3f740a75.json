@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "airqualityanalysis",
+  "private_key_id": "ea5a3f740a7506b75e3eca3aa2ea367bcf8e1179",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCxRNAom8zLbajZ\nBp2g1+Nj3WfJ5yTy+WWOUA/LzGXrfRdNlOCgmMV6qenC0W9A1PfU0wD4zIlMibJq\n8kBiN/PT5mtXXtijBXu17N77DiW0pc5rufpjHgyeC1FV9qwCj/telUJqbkosFYnH\nzg8QuxqzMrKANAnrgxAxENZafQnMjqpwPSjmvxr12doJJ6fSnb8kYk8hY6Vc6hVY\nJdc0FKMcVQqP1M4ihqS3CzT0aO6ZJDG1uM0FqTVpD7/2yvjqVtSmnwfsZV12ebu1\nCuvpQ2GERYA68pGYulnnFV3a1Tk/YfTKd/p4u+uYaA/aqp8yHWYJ1IH4dafLuf/x\nS2NkSyJ1AgMBAAECggEAOhzZcp6UthHGexMopJxxjoD8L9vHKKIqsUs8ym5A8UCq\nXYQTWYKLpqlCGVxIMQRAFLRxip6e2gkABQBSrAA0vkA460UMFvFKu3qiJMJgCQcc\nEwO+ejTVJRCHwvshK5vg54Jd6f8q8KXE68v4816rI5jYnJ+yqtLmAXfIFZUNG9IT\nShjd9D1WoiLgWw3lzhxIUSPzWKwpoTEPc5Pl4LB7fS8Uk0B/XCGIESNFewwI4Qv/\np0aMG0xahLtxeYTX+PoePEMD2TurrvC8I5bDi5uu4hlJRh2LG0OmK1zR4FhN/T1b\nWiZ3PJ1B2es8SuXsF60hgzZ1UooH+IRJaBbzmYO7pwKBgQDi1Bgz0kE+PXNNLaOt\nxH0NOmpDAMu8GSONba77jbQE1mha2BgxKSroyG657n9fdZeHxOPEcBbR1pHcN7pX\n3Ujq+adY2v4GKoEzBanC+gjG10f5DqMROMvEC8ijH2HHIQffiPXOD8KbRl2x7yWF\nJMzCztHfEgdPqxe6cyvPlrxp+wKBgQDIEQ7b/A4nvzpkJ5x9IFbxA4TIREZDGplY\nazU0KeWr2ts9KdhnqAScb+1HUthS+25j04eGMCcoMKK32xYp+xo7ID3fBnJ0CSlG\nCxzYqrMkZgHd5tbJxV28DUYT43SP1eCVuTbl8kbrlYwPMTesrYdvYDYHGqcam1ln\nGJYnIiXqTwKBgDKZ1fxZfyx/UOV6tPTizHLTATmJR+niQcgfG9YKOoqJuiXp5xuw\nb14WuHzJ86g7913WUmlUCAMvtsJFvFA1kTq6DtcHo3uEp+XV8ZUJakPRasDovv/s\nh6hoaI3bRljByZvYVd1uLp+tBuHW06vsFbGvqan1v6PKKzTw1Gku20FZAoGAapOr\ntsSvRb04/eGcG4v+xKV7NrQoOdcRmWiDDybCkqoj4JFKFu4KhsuZO0WGt635QHSO\n3Y0JTv+Zrxem1vZNIvIqA4ULs4St2AJTe5hzlhBBLlSqVxIsvODVVAL3NShaW2gv\nNo+5+AXSdsVhQzutykcWgPJR0nqvRZxzYKVwTUECgYAIDqjwqIZKVVOyj+lS87ey\nQTtc1oWSLhv3H7fnnKC+rTZbMPxC/9XMMMQxquATIXt3NagIqIUfpy5aqlA2qf63\nMpcFX48K/EvcxfEkY2+vQQHK/6fhP1yzL5YxtwCce3ayHZhOXq/78OuKV+XIQMF4\n5AxcykIJe0nmOBVlaUVZdA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "air-820@airqualityanalysis.iam.gserviceaccount.com",
+  "client_id": "117033994177305212451",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/air-820%40airqualityanalysis.iam.gserviceaccount.com"
+}
